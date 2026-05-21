@@ -1,0 +1,12 @@
+crear_cajita edad como numero
+guardar edad con 8
+
+si_pasa edad mayor_o_igual 6 entonces
+    mostrar "puedes jugar"
+si_no_pasa
+    mostrar "todavia eres pequeno"
+fin
+
+repetir 3 veces
+    mostrar "hola"
+fin
