@@ -54,7 +54,6 @@ fin
 ## Comandos de ejecucion
 
 - Lexico: `python3 -m traductor_base lex examples/programa.tb`
-- Scanner: `python3 -m traductor_base scan examples/programa.tb`
 - Sintactico: `python3 -m traductor_base parse examples/programa.tb`
 
 ## Archivos y funciones principales
@@ -64,7 +63,6 @@ fin
 - `lexemas_l.md` describe palabras reservadas y patrones del lenguaje.
 - `traductor_base/definitions_l.py` define tipos de token, lexemas, etiquetas y estructuras base.
 - `traductor_base/lexer_l.py` convierte texto fuente en tokens y reporta errores lexicos.
-- `traductor_base/scanner_l.py` etiqueta lexemas para apoyo teorico y registra errores simples.
 
 ### Analizador sintactico
 
@@ -75,5 +73,5 @@ fin
 ### Archivos compartidos y ejecucion
 
 - `traductor_base/errors_ls.py` centraliza errores lexico y sintactico.
-- `traductor_base/__main__.py` habilita la ejecucion por consola con comandos `lex`, `scan` y `parse`.
+- `traductor_base/__main__.py` habilita la ejecucion por consola con comandos `lex` y `parse`.
 - `traductor_base/__init__.py` expone funciones publicas para importacion.

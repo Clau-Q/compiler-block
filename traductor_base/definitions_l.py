@@ -3,7 +3,7 @@ from __future__ import annotations
 """
 Este archivo concentra la base formal de la fase lexico.
 Contiene los lexemas infantiles del lenguaje, sus etiquetas academicas,
-los tipos de token y las estructuras que usan el lexer y el scanner.
+los tipos de token y las estructuras que usa el lexer.
 """
 
 from dataclasses import dataclass

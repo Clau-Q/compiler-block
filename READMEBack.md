@@ -30,7 +30,6 @@ Esta version ya usa el vocabulario infantil acordado para el proyecto:
 - `gramatica_s.ebnf`: gramatica formal del lenguaje infantil
 - `traductor_base/definitions_l.py`: definiciones de lexemas, etiquetas, tipos de token e identificadores
 - `traductor_base/lexer_l.py`: analizador lexico
-- `traductor_base/scanner_l.py`: escaner academico por etiquetas
 - `traductor_base/parser_s.py`: analizador sintactico
 - `traductor_base/ast_nodes_s.py`: estructura del arbol sintactico
 - `traductor_base/errors_ls.py`: errores compartidos
@@ -47,7 +46,6 @@ En esta fase el codigo usa nombres alineados al lenguaje infantil, por ejemplo:
 - `Repetir`
 - `SiPasa`
 - `AnalizadorSintactico`
-- `Escaner`
 - `CodigoFuente`
 - `ErrorLexico`
 - `ErrorSintactico`
@@ -80,11 +78,6 @@ cd C:\Users\Asus\Documents\Playground\bloques-espanol-fase1
 python -m traductor_base lex .\examples\programa.tb
 ```
 
-### Ver lexemas y etiquetas del scanner
-
-```powershell
-python -m traductor_base scan .\examples\programa.tb
-```
 
 ### Ver estructura sintactica
 
@@ -98,7 +91,6 @@ python -m traductor_base parse .\examples\programa.tb
 2. Regla del identificador.
 3. Gramatica del lenguaje.
 4. Salida del analizador lexico.
-5. Salida del scanner por etiquetas.
-6. Salida del analizador sintactico.
+5. Salida del analizador sintactico.
 
 La semantica, Python, frontend y backend quedaron fuera de esta fase.
