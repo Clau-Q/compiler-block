@@ -46,7 +46,6 @@ En esta fase el codigo usa nombres alineados al lenguaje infantil, por ejemplo:
 - `Repetir`
 - `SiPasa`
 - `AnalizadorSintactico`
-- `CodigoFuente`
 - `ErrorLexico`
 - `ErrorSintactico`
 
