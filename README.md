@@ -18,13 +18,40 @@ Esta version ya usa el vocabulario infantil acordado para el proyecto:
 - `repetir`
 - `fin`
 
-## Sufijos usados
+## Requisitos
 
-- `_l`: archivo orientado a la fase lexico
-- `_s`: archivo orientado a la fase sintactica
-- `_ls`: archivo compartido entre ambas fases
+- Linux con `python3` (recomendado 3.10+)
+- No hay dependencias externas
 
-## Archivos que debes presentar
+## Uso rapido (Linux)
+
+1. Ubicate en la carpeta del proyecto:
+
+```bash
+cd /ruta/al/proyecto
+```
+
+1. Ver tokens del analizador lexico:
+
+```bash
+python3 -m traductor_base lex ./examples/programa.tb
+```
+
+1. Ver lexemas y etiquetas del scanner:
+
+```bash
+python3 -m traductor_base scan ./examples/programa.tb
+```
+
+1. Ver estructura sintactica:
+
+```bash
+python3 -m traductor_base parse ./examples/programa.tb
+```
+
+Compatibilidad Windows: los mismos comandos funcionan con `python` y rutas estilo `.` y `\` (por ejemplo `python -m traductor_base lex .\examples\programa.tb`).
+
+## Archivos clave
 
 - `lexemas_l.md`: tabla de palabras reservadas y patrones del lenguaje infantil
 - `gramatica_s.ebnf`: gramatica formal del lenguaje infantil
@@ -35,6 +62,12 @@ Esta version ya usa el vocabulario infantil acordado para el proyecto:
 - `traductor_base/ast_nodes_s.py`: estructura del arbol sintactico
 - `traductor_base/errors_ls.py`: errores compartidos
 - `examples/programa.tb`: programa de ejemplo
+
+## Sufijos usados
+
+- `_l`: archivo orientado a la fase lexico
+- `_s`: archivo orientado a la fase sintactica
+- `_ls`: archivo compartido entre ambas fases
 
 ## Nombres internos
 
@@ -65,40 +98,3 @@ Patron base:
 ```text
 [A-Za-z_][A-Za-z0-9_]*
 ```
-
-## Comandos de prueba
-
-Ubicate en:
-
-```powershell
-cd C:\Users\Asus\Documents\Playground\bloques-espanol-fase1
-```
-
-### Ver tokens del analizador lexico
-
-```powershell
-python -m traductor_base lex .\examples\programa.tb
-```
-
-### Ver lexemas y etiquetas del scanner
-
-```powershell
-python -m traductor_base scan .\examples\programa.tb
-```
-
-### Ver estructura sintactica
-
-```powershell
-python -m traductor_base parse .\examples\programa.tb
-```
-
-## Que debes presentar ahora
-
-1. Tabla de lexemas y tokens.
-2. Regla del identificador.
-3. Gramatica del lenguaje.
-4. Salida del analizador lexico.
-5. Salida del scanner por etiquetas.
-6. Salida del analizador sintactico.
-
-La semantica, Python, frontend y backend quedaron fuera de esta fase.
