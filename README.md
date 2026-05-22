@@ -55,18 +55,6 @@ si_pasa contador mayor_que 3 entonces
 fin
 ```
 
-## Carpetas del analizador lexico
-
-- `traductor_base/` contiene el codigo lexico en archivos con sufijo `_l` y `_ls`.
-- `tests/` guarda pruebas del analisis lexico.
-- `examples/` incluye programas de entrada para validar el lexico.
-
-## Carpetas del analizador sintactico
-
-- `traductor_base/` contiene el codigo sintactico en archivos con sufijo `_s` y `_ls`.
-- `tests/` guarda pruebas del analisis sintactico.
-- `examples/` incluye programas de entrada para validar la gramatica.
-
 ## Archivos y funciones principales
 
 ### Analizador lexico
