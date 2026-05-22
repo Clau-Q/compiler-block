@@ -3,10 +3,6 @@
 Este proyecto construye la base de un traductor para un lenguaje educativo.
 En esta fase solo se cubren el analisis lexico y el analisis sintactico.
 
-## Nombre del proyecto
-
-Bloques Espanol Fase 1.
-
 ## Objetivo del proyecto
 
 Desarrollar un compilador para un lenguaje de programacion visual basado en
