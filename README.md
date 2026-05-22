@@ -1,4 +1,4 @@
-# Bloques Espanol Fase 1
+# Diseño de un compilador para un lenguaje visual infantil como puente entre bloques y lenguajes textuales
 
 Este proyecto construye la base de un traductor para un lenguaje educativo.
 En esta fase solo se cubren el analisis lexico y el analisis sintactico.
@@ -9,10 +9,12 @@ Bloques Espanol Fase 1.
 
 ## Objetivo del proyecto
 
-Disenar e implementar un analizador lexico y un analizador sintactico para un
-lenguaje infantil de bloques. El sistema reconoce lexemas, genera tokens y
-valida la estructura de los programas segun una gramatica formal. Esta fase
-incluye una representacion basica del arbol sintactico y un manejo inicial de
+Desarrollar un compilador para un lenguaje de programacion visual basado en
+bloques, orientado a ninos. La propuesta es estrictamente secuencial y evita
+eventos concurrentes para reducir la carga cognitiva. El compilador traduce los
+programas de bloques a codigo Python y facilita la transicion hacia lenguajes
+textuales. En esta fase se implementan el analisis lexico y el analisis
+sintactico, con una representacion basica del arbol y un manejo inicial de
 errores.
 
 ## Flujo del programa
@@ -67,13 +69,21 @@ fin
 
 ## Archivos y funciones principales
 
+### Analizador lexico
+
 - `lexemas_l.md` describe palabras reservadas y patrones del lenguaje.
-- `gramatica_s.ebnf` fija la gramatica formal usada por el parser.
 - `traductor_base/definitions_l.py` define tipos de token, lexemas, etiquetas y estructuras base.
 - `traductor_base/lexer_l.py` convierte texto fuente en tokens y reporta errores lexicos.
 - `traductor_base/scanner_l.py` etiqueta lexemas para apoyo teorico y registra errores simples.
+
+### Analizador sintactico
+
+- `gramatica_s.ebnf` fija la gramatica formal usada por el parser.
 - `traductor_base/parser_s.py` valida la secuencia de tokens y construye el arbol sintactico.
 - `traductor_base/ast_nodes_s.py` modela los nodos del arbol sintactico.
+
+### Archivos compartidos y ejecucion
+
 - `traductor_base/errors_ls.py` centraliza errores lexico y sintactico.
 - `traductor_base/__main__.py` habilita la ejecucion por consola con comandos `lex`, `scan` y `parse`.
 - `traductor_base/__init__.py` expone funciones publicas para importacion.
