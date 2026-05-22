@@ -8,6 +8,7 @@ analisis lexico y analisis sintactico.
 
 import sys
 
+from .errors_ls import ErrorTraductor
 from .lexer_l import analizar_archivo_lexico
 from .parser_s import analizar_archivo_sintactico
 
@@ -22,17 +23,21 @@ def main(argv: list[str] | None = None) -> int:
 
     comando, ruta = args[0], args[1]
 
-    if comando == "lex":
-        for token in analizar_archivo_lexico(ruta):
-            print(
-                f"{token.tipo.name:<15} {token.lexema!r:<20} "
-                f"linea={token.linea} columna={token.columna}"
-            )
-        return 0
+    try:
+        if comando == "lex":
+            for token in analizar_archivo_lexico(ruta):
+                print(
+                    f"{token.tipo.name:<15} {token.lexema!r:<20} "
+                    f"linea={token.linea} columna={token.columna}"
+                )
+            return 0
 
-    if comando == "parse":
-        print(analizar_archivo_sintactico(ruta))
-        return 0
+        if comando == "parse":
+            print(analizar_archivo_sintactico(ruta))
+            return 0
+    except ErrorTraductor as error:
+        print(error)
+        return 1
 
     return 1
 

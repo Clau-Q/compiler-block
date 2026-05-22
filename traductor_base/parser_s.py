@@ -61,8 +61,10 @@ class AnalizadorSintactico:
         while not self._verificar(*tokens_de_cierre):
             if self._verificar(TipoToken.FIN_ARCHIVO):
                 esperado = ", ".join(token.name for token in tokens_de_cierre)
+                token = self._token_actual()
                 raise ErrorSintactico(
-                    f"El bloque termino antes de encontrar {esperado.lower()}."
+                    f"El bloque termino antes de encontrar {esperado.lower()}. "
+                    f"Linea {token.linea}, columna {token.columna}."
                 )
             sentencias.append(self._sentencia())
             self._omitir_saltos_de_linea()
