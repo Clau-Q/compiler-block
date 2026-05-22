@@ -31,17 +31,6 @@ def main(argv: list[str] | None = None) -> int:
             )
         return 0
 
-    # if comando == "scan":
-    #     tokens, errores = escanear_archivo(ruta)
-    #     for token in tokens:
-    #         print(token)
-    #     if errores:
-    #         print("Errores:")
-    #         for error in errores:
-    #             print(error)
-    #         return 1
-    #     return 0
-
     if comando == "parse":
         print(analizar_archivo_sintactico(ruta))
         return 0
