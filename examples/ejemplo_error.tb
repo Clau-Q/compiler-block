@@ -1,0 +1,4 @@
+crear_cajita edad como numero
+guardar edad con 5
+si_pasa edad mayor_que 3 entonces
+  mostrar "ok"
