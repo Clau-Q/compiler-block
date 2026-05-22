@@ -51,6 +51,12 @@ si_pasa contador mayor_que 3 entonces
 fin
 ```
 
+## Comandos de ejecucion
+
+- Lexico: `python3 -m traductor_base lex examples/programa.tb`
+- Scanner: `python3 -m traductor_base scan examples/programa.tb`
+- Sintactico: `python3 -m traductor_base parse examples/programa.tb`
+
 ## Archivos y funciones principales
 
 ### Analizador lexico
